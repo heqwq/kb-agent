@@ -188,4 +188,4 @@ kb-agent/
 
 ## 9. License
 
-MIT，Copyright (c) 2026 常志博。见 [`LICENSE`](LICENSE)。
+MIT，Copyright (c) 2026 zhibo。见 [`LICENSE`](LICENSE)。
