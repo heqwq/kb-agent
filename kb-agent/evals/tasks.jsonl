@@ -1,0 +1,20 @@
+{"id": "t01", "hop": "single", "task": "一线城市出差住宿标准每晚多少钱？", "allowed_tools": ["kb_search", "calculator"], "expected_tool": "kb_search", "expect_answer_contains": "600"}
+{"id": "t02", "hop": "single", "task": "P0 故障的首次响应时限是多久？", "allowed_tools": ["kb_search"], "expected_tool": "kb_search", "expect_answer_contains": "5 分钟"}
+{"id": "t03", "hop": "single", "task": "年假最晚可以顺延到什么时候？", "allowed_tools": ["kb_search", "sql_query", "calculator"], "expected_tool": "kb_search", "expect_answer_contains": "次年 3 月 31 日"}
+{"id": "t04", "hop": "single", "task": "数据泄露应该拨打哪个安全热线？", "allowed_tools": ["kb_search", "calculator"], "expected_tool": "kb_search", "expect_answer_contains": "8002"}
+{"id": "t05", "hop": "single", "task": "标准版产品的 API 限流是多少？", "allowed_tools": ["kb_search", "sql_query"], "expected_tool": "kb_search", "expect_answer_contains": "60 次/分钟"}
+{"id": "t06", "hop": "single", "task": "晋升评审要求在当前职级满多少个月？", "allowed_tools": ["kb_search"], "expected_tool": "kb_search", "expect_answer_contains": "12 个月"}
+{"id": "t07", "hop": "single", "task": "采购金额超过多少元需要公开招标？", "allowed_tools": ["kb_search", "calculator"], "expected_tool": "kb_search", "expect_answer_contains": "200000"}
+{"id": "t08", "hop": "single", "task": "新人训练营考试多少分及格？", "allowed_tools": ["kb_search", "calculator"], "expected_tool": "kb_search", "expect_answer_contains": "80 分"}
+{"id": "t09", "hop": "single", "task": "查询 2026 年 9 月华东区已支付订单的 GMV。", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "69358.7"}
+{"id": "t10", "hop": "single", "task": "查询 2026 年 8 月华北区已支付订单的 GMV。", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "47891.84"}
+{"id": "t11", "hop": "single", "task": "统计 2026 年 9 月各渠道的订单数，按数量从高到低。", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "65"}
+{"id": "t12", "hop": "single", "task": "2026 年 9 月有多少笔退款订单？", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "19"}
+{"id": "t13", "hop": "single", "task": "2026 年 9 月哪个区域的已支付 GMV 最高？", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "华东"}
+{"id": "t14", "hop": "single", "task": "平台一共有多少位客户？", "allowed_tools": ["sql_query", "calculator"], "expected_tool": "sql_query", "expect_answer_contains": "120"}
+{"id": "t15", "hop": "single", "task": "计算 (1280 + 320) * 0.85 的结果。", "allowed_tools": ["calculator", "kb_search"], "expected_tool": "calculator", "expect_answer_contains": "1360.0"}
+{"id": "t16", "hop": "multi", "task": "华南区 2026 年 9 月 GMV 占全公司同月 GMV 的百分比是多少？", "allowed_tools": ["kb_search", "sql_query", "calculator"], "required_tools": ["kb_search", "sql_query", "calculator"], "expected_tool": "calculator", "expect_answer_contains": "25.42"}
+{"id": "t17", "hop": "multi", "task": "2026 年 9 月退款订单占全部订单的比例是多少？", "allowed_tools": ["kb_search", "sql_query", "calculator"], "required_tools": ["sql_query", "calculator"], "expected_tool": "calculator", "expect_answer_contains": "10.33"}
+{"id": "t18", "hop": "multi", "task": "去上海出差 5 天，按一线城市标准，住宿 3 晚和餐补 5 天合计最多报销多少元？", "allowed_tools": ["kb_search", "calculator"], "required_tools": ["kb_search", "calculator"], "expected_tool": "calculator", "expect_answer_contains": "2400"}
+{"id": "t19", "hop": "multi", "task": "2026 年 9 月华东区 GMV 比华南区高百分之几？", "allowed_tools": ["kb_search", "sql_query", "calculator"], "required_tools": ["kb_search", "sql_query", "calculator"], "expected_tool": "calculator", "expect_answer_contains": "15.0"}
+{"id": "t20", "hop": "multi", "task": "2026 年 9 月天猫渠道的 GMV 占全渠道 GMV 的比例是多少？", "allowed_tools": ["kb_search", "sql_query", "calculator"], "required_tools": ["kb_search", "sql_query", "calculator"], "expected_tool": "calculator", "expect_answer_contains": "35.35"}

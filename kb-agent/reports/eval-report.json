@@ -1,0 +1,481 @@
+{
+  "generated_at": "2026-10-26T22:36:01+08:00",
+  "runtime": "Python 3.12.14 / Windows-11-10.0.26200-SP0",
+  "corpus": {
+    "docs": 13,
+    "chunks": 40
+  },
+  "split": {
+    "seed": 20261026,
+    "dev": 18,
+    "test": 12,
+    "dev_ids": [
+      "q01",
+      "q05",
+      "q06",
+      "q07",
+      "q09",
+      "q10",
+      "q12",
+      "q14",
+      "q15",
+      "q16",
+      "q17",
+      "q21",
+      "q22",
+      "q23",
+      "q26",
+      "q27",
+      "q28",
+      "q29"
+    ],
+    "test_ids": [
+      "q02",
+      "q03",
+      "q04",
+      "q08",
+      "q11",
+      "q13",
+      "q18",
+      "q19",
+      "q20",
+      "q24",
+      "q25",
+      "q30"
+    ],
+    "selected": {
+      "rrf_k": 10,
+      "bm25_weight": 1.0,
+      "dense_weight": 4.0
+    }
+  },
+  "retrieval": {
+    "questions": 12,
+    "types": {
+      "词面型": {
+        "count": 6,
+        "examples": [
+          "P0 故障的首次响应 SLA 是多少分钟？",
+          "L3 数据能否在公共网络环境处理？"
+        ]
+      },
+      "语义型": {
+        "count": 6,
+        "examples": [
+          "公司配的电脑罢工了该找谁？",
+          "客户资料能不能直接粘到外部聊天机器人里？"
+        ]
+      }
+    },
+    "configs": {
+      "BM25 only": {
+        "recall@1": 0.5,
+        "recall@3": 0.6667,
+        "recall@5": 0.75,
+        "mrr": 0.5903,
+        "ndcg@5": 0.6301,
+        "p95_latency_ms": 2.4962
+      },
+      "Dense only": {
+        "recall@1": 0.9167,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.9583,
+        "ndcg@5": 0.9692,
+        "p95_latency_ms": 1.931
+      },
+      "Hybrid + RRF": {
+        "recall@1": 0.9167,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "mrr": 0.9583,
+        "ndcg@5": 0.9692,
+        "p95_latency_ms": 1.8007
+      }
+    },
+    "by_type": {
+      "BM25 only": {
+        "词面型": {
+          "recall@1": 0.8333,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "mrr": 0.9167,
+          "ndcg@5": 0.9385
+        },
+        "语义型": {
+          "recall@1": 0.1667,
+          "recall@3": 0.3333,
+          "recall@5": 0.5,
+          "mrr": 0.2639,
+          "ndcg@5": 0.3218
+        }
+      },
+      "Dense only": {
+        "词面型": {
+          "recall@1": 0.8333,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "mrr": 0.9167,
+          "ndcg@5": 0.9385
+        },
+        "语义型": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@5": 1.0
+        }
+      },
+      "Hybrid + RRF": {
+        "词面型": {
+          "recall@1": 0.8333,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "mrr": 0.9167,
+          "ndcg@5": 0.9385
+        },
+        "语义型": {
+          "recall@1": 1.0,
+          "recall@3": 1.0,
+          "recall@5": 1.0,
+          "mrr": 1.0,
+          "ndcg@5": 1.0
+        }
+      }
+    }
+  },
+  "dev": {
+    "metrics": {
+      "questions": 18,
+      "types": {
+        "词面型": {
+          "count": 8,
+          "examples": [
+            "补卡每月最多可以申请几次？",
+            "OA 出差申请单需要谁审批？"
+          ]
+        },
+        "语义型": {
+          "count": 10,
+          "examples": [
+            "我下个月要结婚，能请几天假？",
+            "半夜系统挂了该找谁？"
+          ]
+        }
+      },
+      "configs": {
+        "BM25 only": {
+          "recall@1": 0.5556,
+          "recall@3": 0.6667,
+          "recall@5": 0.7778,
+          "mrr": 0.6389,
+          "ndcg@5": 0.6735,
+          "p95_latency_ms": 2.6251
+        },
+        "Dense only": {
+          "recall@1": 0.8333,
+          "recall@3": 0.9444,
+          "recall@5": 0.9444,
+          "mrr": 0.8704,
+          "ndcg@5": 0.8889,
+          "p95_latency_ms": 1.7505
+        },
+        "Hybrid + RRF": {
+          "recall@1": 0.8333,
+          "recall@3": 0.9444,
+          "recall@5": 0.9444,
+          "mrr": 0.8889,
+          "ndcg@5": 0.9034,
+          "p95_latency_ms": 1.571
+        }
+      },
+      "by_type": {
+        "BM25 only": {
+          "词面型": {
+            "recall@1": 1.0,
+            "recall@3": 1.0,
+            "recall@5": 1.0,
+            "mrr": 1.0,
+            "ndcg@5": 1.0
+          },
+          "语义型": {
+            "recall@1": 0.2,
+            "recall@3": 0.4,
+            "recall@5": 0.6,
+            "mrr": 0.35,
+            "ndcg@5": 0.4123
+          }
+        },
+        "Dense only": {
+          "词面型": {
+            "recall@1": 0.75,
+            "recall@3": 1.0,
+            "recall@5": 1.0,
+            "mrr": 0.8333,
+            "ndcg@5": 0.875
+          },
+          "语义型": {
+            "recall@1": 0.9,
+            "recall@3": 0.9,
+            "recall@5": 0.9,
+            "mrr": 0.9,
+            "ndcg@5": 0.9
+          }
+        },
+        "Hybrid + RRF": {
+          "词面型": {
+            "recall@1": 0.875,
+            "recall@3": 1.0,
+            "recall@5": 1.0,
+            "mrr": 0.9375,
+            "ndcg@5": 0.9539
+          },
+          "语义型": {
+            "recall@1": 0.8,
+            "recall@3": 0.9,
+            "recall@5": 0.9,
+            "mrr": 0.85,
+            "ndcg@5": 0.8631
+          }
+        }
+      }
+    },
+    "sweep": [
+      {
+        "rrf_k": 10,
+        "dense_weight": 1.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 10,
+        "dense_weight": 1.5,
+        "recall@1": 0.7778,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8519,
+        "ndcg@5": 0.8757
+      },
+      {
+        "rrf_k": 10,
+        "dense_weight": 2.0,
+        "recall@1": 0.8333,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8796,
+        "ndcg@5": 0.8962
+      },
+      {
+        "rrf_k": 10,
+        "dense_weight": 3.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8519,
+        "ndcg@5": 0.8757
+      },
+      {
+        "rrf_k": 10,
+        "dense_weight": 4.0,
+        "recall@1": 0.8333,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8889,
+        "ndcg@5": 0.9034
+      },
+      {
+        "rrf_k": 20,
+        "dense_weight": 1.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 20,
+        "dense_weight": 1.5,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 20,
+        "dense_weight": 2.0,
+        "recall@1": 0.8333,
+        "recall@3": 0.8333,
+        "recall@5": 0.9444,
+        "mrr": 0.8611,
+        "ndcg@5": 0.8812
+      },
+      {
+        "rrf_k": 20,
+        "dense_weight": 3.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8519,
+        "ndcg@5": 0.8757
+      },
+      {
+        "rrf_k": 20,
+        "dense_weight": 4.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.9444,
+        "recall@5": 0.9444,
+        "mrr": 0.8519,
+        "ndcg@5": 0.8757
+      },
+      {
+        "rrf_k": 60,
+        "dense_weight": 1.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 60,
+        "dense_weight": 1.5,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 60,
+        "dense_weight": 2.0,
+        "recall@1": 0.8333,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8472,
+        "ndcg@5": 0.8573
+      },
+      {
+        "rrf_k": 60,
+        "dense_weight": 3.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.8889,
+        "mrr": 0.8194,
+        "ndcg@5": 0.8368
+      },
+      {
+        "rrf_k": 60,
+        "dense_weight": 4.0,
+        "recall@1": 0.7778,
+        "recall@3": 0.8333,
+        "recall@5": 0.9444,
+        "mrr": 0.8306,
+        "ndcg@5": 0.8582
+      }
+    ]
+  },
+  "agent": {
+    "tasks": 20,
+    "mock_planner": true,
+    "task_success_rate": 0.9,
+    "tool_selection_accuracy": 0.9,
+    "avg_steps": 2.5,
+    "avg_tool_calls": 1.5,
+    "tool_call_distribution": {
+      "1": 15,
+      "3": 5
+    },
+    "hop_stats": {
+      "single": {
+        "total": 15,
+        "success": 15,
+        "tool_ok": 15,
+        "success_rate": 1.0,
+        "tool_selection_accuracy": 1.0
+      },
+      "multi": {
+        "total": 5,
+        "success": 3,
+        "tool_ok": 3,
+        "success_rate": 0.6,
+        "tool_selection_accuracy": 0.6
+      }
+    },
+    "example_trace": {
+      "id": "t16",
+      "task": "华南区 2026 年 9 月 GMV 占全公司同月 GMV 的百分比是多少？",
+      "answer": "计算结果：25.42（表达式：60310.34 / 237222.86 * 100）",
+      "stopped_reason": "answered",
+      "steps": [
+        {
+          "step": 1,
+          "tool": "kb_search",
+          "args": {
+            "query": "GMV 统计口径 已支付订单",
+            "k": 5
+          },
+          "ok": true,
+          "latency_ms": 1.196,
+          "error": null,
+          "result_excerpt": "{\"query\": \"GMV 统计口径 已支付订单\", \"results\": [{\"text\": \"| 指标 | 计算方式 |\\n| --- | --- |\\n| 客单价 | 已支付订单金额之和 / 已支付订单数 |\\n| 退款率 | 退款订单数 / 全部订单数 |\\n| 渠道占比 | 该渠道已支付 GMV / 全部已支付 GMV |\\n| 区域占比 | 该区域已支付 GMV / 全部已支付 GMV |\\n百分比结果保留两位小数。需要中间过程时，先分别查出分子和分母，再用计算器求比率，避免在自然语言里心算。数据更新时间为每日 06:00，T+1 口径；临时补数需在报表中注明。分析结果用于经营参"
+        },
+        {
+          "step": 2,
+          "tool": "sql_query",
+          "args": {
+            "sql": "SELECT ROUND(SUM(CASE WHEN region = '华南' THEN amount ELSE 0 END), 2) AS south_gmv, ROUND(SUM(amount), 2) AS total_gmv FROM orders WHERE created_at LIKE '2026-09%' AND status = 'paid'"
+          },
+          "ok": true,
+          "latency_ms": 0.719,
+          "error": null,
+          "result_excerpt": "{\"columns\": [\"south_gmv\", \"total_gmv\"], \"rows\": [[60310.34, 237222.86]], \"truncated\": false}"
+        },
+        {
+          "step": 3,
+          "tool": "calculator",
+          "args": {
+            "expression": "60310.34 / 237222.86 * 100"
+          },
+          "ok": true,
+          "latency_ms": 0.036,
+          "error": null,
+          "result_excerpt": "{\"expression\": \"60310.34 / 237222.86 * 100\", \"result\": 25.423494177584736}"
+        }
+      ]
+    },
+    "failures": [
+      {
+        "id": "t19",
+        "hop": "multi",
+        "task": "2026 年 9 月华东区 GMV 比华南区高百分之几？",
+        "expected_tool": "calculator",
+        "actual_tools": [
+          "kb_search",
+          "sql_query",
+          "sql_query"
+        ],
+        "answer_contains": false,
+        "stopped_reason": "answered",
+        "answer": "查询结果：\n列：gmv\n60310.34"
+      },
+      {
+        "id": "t20",
+        "hop": "multi",
+        "task": "2026 年 9 月天猫渠道的 GMV 占全渠道 GMV 的比例是多少？",
+        "expected_tool": "calculator",
+        "actual_tools": [
+          "kb_search",
+          "sql_query",
+          "sql_query"
+        ],
+        "answer_contains": false,
+        "stopped_reason": "answered",
+        "answer": "查询结果：\n列：gmv\n237222.86"
+      }
+    ]
+  }
+}

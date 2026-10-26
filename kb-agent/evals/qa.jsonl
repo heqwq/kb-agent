@@ -1,0 +1,30 @@
+{"id": "q01", "split": "dev", "query_type": "lexical", "question": "补卡每月最多可以申请几次？", "gold_doc_ids": ["01-attendance"], "answer_keywords": ["3 次"]}
+{"id": "q02", "split": "test", "query_type": "lexical", "question": "P0 故障的首次响应 SLA 是多少分钟？", "gold_doc_ids": ["07-oncall-incident"], "answer_keywords": ["5 分钟"]}
+{"id": "q03", "split": "test", "query_type": "lexical", "question": "L3 数据能否在公共网络环境处理？", "gold_doc_ids": ["05-data-security"], "answer_keywords": ["公司设备", "VPN"]}
+{"id": "q04", "split": "test", "query_type": "lexical", "question": "一线城市出差住宿标准每晚多少元？", "gold_doc_ids": ["02-travel-expense"], "answer_keywords": ["600"]}
+{"id": "q05", "split": "dev", "query_type": "lexical", "question": "OA 出差申请单需要谁审批？", "gold_doc_ids": ["02-travel-expense"], "answer_keywords": ["直属主管"]}
+{"id": "q06", "split": "dev", "query_type": "lexical", "question": "发票抬头和税号要求是什么？", "gold_doc_ids": ["02-travel-expense"], "answer_keywords": ["星岚科技有限公司"]}
+{"id": "q07", "split": "dev", "query_type": "lexical", "question": "SSO 支持 SAML 2.0 吗？", "gold_doc_ids": ["04-product-faq"], "answer_keywords": ["SAML 2.0"]}
+{"id": "q08", "split": "test", "query_type": "lexical", "question": "标准版 API 每分钟限流多少次？", "gold_doc_ids": ["04-product-faq"], "answer_keywords": ["60 次/分钟"]}
+{"id": "q09", "split": "dev", "query_type": "lexical", "question": "L3 数据批量导出阈值是多少条记录？", "gold_doc_ids": ["05-data-security"], "answer_keywords": ["500 条"]}
+{"id": "q10", "split": "dev", "query_type": "lexical", "question": "PIP 周期的三个档位是什么？", "gold_doc_ids": ["08-performance"], "answer_keywords": ["30 天", "60 天", "90 天"]}
+{"id": "q11", "split": "test", "query_type": "lexical", "question": "采购至少三家比价的金额区间？", "gold_doc_ids": ["09-procurement"], "answer_keywords": ["5000–50000 元"]}
+{"id": "q12", "split": "dev", "query_type": "lexical", "question": "公积金缴存比例是多少？", "gold_doc_ids": ["11-compensation"], "answer_keywords": ["7%"]}
+{"id": "q13", "split": "test", "query_type": "lexical", "question": "新人训练营的及格线是多少分？", "gold_doc_ids": ["10-training"], "answer_keywords": ["80 分"]}
+{"id": "q14", "split": "dev", "query_type": "lexical", "question": "无会议时段安排在周几？", "gold_doc_ids": ["12-company-collab"], "answer_keywords": ["周三"]}
+{"id": "q15", "split": "dev", "query_type": "semantic", "question": "我下个月要结婚，能请几天假？", "gold_doc_ids": ["01-attendance"], "answer_keywords": ["10 天", "婚假"]}
+{"id": "q16", "split": "dev", "query_type": "semantic", "question": "半夜系统挂了该找谁？", "gold_doc_ids": ["07-oncall-incident"], "answer_keywords": ["P0", "值班"]}
+{"id": "q17", "split": "dev", "query_type": "semantic", "question": "刚入职第一周需要完成哪些事？", "gold_doc_ids": ["06-onboarding"], "answer_keywords": ["必修课", "30-60-90"]}
+{"id": "q18", "split": "test", "query_type": "semantic", "question": "公司配的电脑罢工了该找谁？", "gold_doc_ids": ["03-it-assets"], "answer_keywords": ["IT 服务台", "故障报修"]}
+{"id": "q19", "split": "test", "query_type": "semantic", "question": "客户资料能不能直接粘到外部聊天机器人里？", "gold_doc_ids": ["05-data-security"], "answer_keywords": ["禁止", "L3", "L4"]}
+{"id": "q20", "split": "test", "query_type": "semantic", "question": "我今年想考证，公司能出多少钱？", "gold_doc_ids": ["10-training"], "answer_keywords": ["70%", "8000 元"]}
+{"id": "q21", "split": "dev", "query_type": "semantic", "question": "每月薪水什么时候能到账？", "gold_doc_ids": ["11-compensation"], "answer_keywords": ["15 日"]}
+{"id": "q22", "split": "dev", "query_type": "semantic", "question": "升职一年有几次机会？", "gold_doc_ids": ["08-performance"], "answer_keywords": ["4 月", "10 月"]}
+{"id": "q23", "split": "dev", "query_type": "semantic", "question": "新人入职要带哪些证件？", "gold_doc_ids": ["06-onboarding"], "answer_keywords": ["身份证", "离职证明"]}
+{"id": "q24", "split": "test", "query_type": "semantic", "question": "从外地回来多久之内要交单据？", "gold_doc_ids": ["02-travel-expense"], "answer_keywords": ["15 个工作日"]}
+{"id": "q25", "split": "test", "query_type": "semantic", "question": "公司电脑里想装个新工具，走什么流程？", "gold_doc_ids": ["03-it-assets"], "answer_keywords": ["IT 服务台", "软件"]}
+{"id": "q26", "split": "dev", "query_type": "semantic", "question": "把资料发给客户之前要经过谁同意？", "gold_doc_ids": ["05-data-security"], "answer_keywords": ["数据 Owner", "安全团队"]}
+{"id": "q27", "split": "dev", "query_type": "semantic", "question": "想找一家外部厂商长期供货，第一步做什么？", "gold_doc_ids": ["09-procurement"], "answer_keywords": ["供应商准入", "尽调"]}
+{"id": "q28", "split": "dev", "query_type": "semantic", "question": "入职后能学哪些东西，公司有安排吗？", "gold_doc_ids": ["10-training"], "answer_keywords": ["新人训练营", "Guild"]}
+{"id": "q29", "split": "dev", "query_type": "semantic", "question": "除了总部，公司还在哪个城市有研发团队？", "gold_doc_ids": ["12-company-collab"], "answer_keywords": ["杭州"]}
+{"id": "q30", "split": "test", "query_type": "semantic", "question": "孩子出生有多少天假？", "gold_doc_ids": ["01-attendance"], "answer_keywords": ["产假", "陪产假"]}

@@ -1,0 +1,5 @@
+# 可选依赖；核心 kb_agent 包不需要这些包。
+fastapi>=0.110
+uvicorn[standard]>=0.29
+langchain>=0.3
+langchain-openai>=0.2

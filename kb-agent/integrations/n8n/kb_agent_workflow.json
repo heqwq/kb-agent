@@ -1,0 +1,101 @@
+{
+  "_comment": "导入方式：n8n → Workflows → Import from File → 选择本 JSON。运行前把 HTTP Request 的 URL 改为 FastAPI 实际地址。本示例未在 n8n 实例中验证。",
+  "name": "星岚知识库 Agent",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "trigger-1",
+      "name": "手动触发",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "question-1",
+              "name": "question",
+              "value": "一线城市出差住宿标准每晚多少钱？",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "set-1",
+      "name": "设置问题",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [240, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:8000/ask",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\"question\": \"{{ $json.question }}\", \"max_steps\": 6}",
+        "options": {}
+      },
+      "id": "http-1",
+      "name": "调用 /ask",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [500, 0]
+    },
+    {
+      "parameters": {},
+      "id": "noop-1",
+      "name": "完成",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [760, 0]
+    }
+  ],
+  "connections": {
+    "手动触发": {
+      "main": [
+        [
+          {
+            "node": "设置问题",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "设置问题": {
+      "main": [
+        [
+          {
+            "node": "调用 /ask",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "调用 /ask": {
+      "main": [
+        [
+          {
+            "node": "完成",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "7f8b00e0-7d4e-4dcb-a4d7-1e5b4c2f9a10",
+  "meta": {
+    "description": "通过 HTTP 调用星岚知识库 Agent 的最小示例"
+  },
+  "tags": []
+}

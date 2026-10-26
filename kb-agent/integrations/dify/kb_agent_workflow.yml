@@ -1,0 +1,100 @@
+# 导入方式：Dify 控制台 → 工作室 → 创建空白应用 → 导入 DSL 文件 → 选择本 YAML。
+# 先把 http_query 的 URL 改为 Dify 能访问到的 FastAPI 地址；Dify 与 FastAPI 同机 Docker 时
+# 可用 http://host.docker.internal:8000/ask，本机直连可用 http://127.0.0.1:8000/ask。
+# 本示例按 Dify workflow DSL 编写，未在具体 Dify 版本上验证；节点字段以你的 Dify 版本为准。
+
+app:
+  description: 调用星岚知识库 Agent 的 FastAPI /ask 接口，返回答案与工具轨迹。
+  icon: "📚"
+  icon_background: "#E0F2FE"
+  mode: workflow
+  name: 星岚知识库问答
+kind: app
+version: 0.1.5
+workflow:
+  conversation_variables: []
+  environment_variables: []
+  features:
+    file_upload:
+      enabled: false
+  graph:
+    edges:
+      - id: start-to-http
+        source: start
+        sourceHandle: source
+        target: http_query
+        targetHandle: target
+        type: custom
+        data:
+          isInIteration: false
+          sourceType: start
+          targetType: http-request
+      - id: http-to-end
+        source: http_query
+        sourceHandle: source
+        target: end
+        targetHandle: target
+        type: custom
+        data:
+          isInIteration: false
+          sourceType: http-request
+          targetType: end
+    nodes:
+      - id: start
+        type: custom
+        position:
+          x: 80
+          y: 260
+        data:
+          type: start
+          title: 开始
+          desc: 接收用户问题
+          selected: false
+          variables:
+            - variable: question
+              label: 用户问题
+              type: text-input
+              required: true
+              max_length: 500
+      - id: http_query
+        type: custom
+        position:
+          x: 380
+          y: 260
+        data:
+          type: http-request
+          title: 调用 /ask
+          desc: 请求 FastAPI 服务
+          selected: false
+          method: post
+          url: http://host.docker.internal:8000/ask
+          authorization:
+            type: no-auth
+            config: null
+          headers: "Content-Type: application/json"
+          params: ""
+          body:
+            type: json
+            data: '{"question": "{{#start.question#}}", "max_steps": 6}'
+          timeout:
+            max_connect_timeout: 10
+            max_read_timeout: 60
+            max_write_timeout: 10
+      - id: end
+        type: custom
+        position:
+          x: 700
+          y: 260
+        data:
+          type: end
+          title: 结束
+          desc: 输出答案
+          selected: false
+          outputs:
+            answer:
+              type: string
+              value: "{{#http_query.body#}}"
+    viewport:
+      x: 0
+      y: 0
+      zoom: 1

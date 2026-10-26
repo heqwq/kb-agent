@@ -1,0 +1,8 @@
+{
+  "embedder": {
+    "kind": "hashing",
+    "dim": 512
+  },
+  "chunks": 40,
+  "docs": 13
+}
